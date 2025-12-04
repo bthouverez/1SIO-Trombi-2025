@@ -1,3 +1,20 @@
+#BELROSE{
+     background: #eae8e8;
+    box-shadow: 0 0 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    color: black;
+
+}
+
+#BELROSE:hover{
+        background-color: #a3a2a2;
+    }
+
+#BELROSE p{
+    text-align: center;
+    font-weight: bold;
+}
 
 
 #GUERIPEL {
@@ -20,6 +37,7 @@
 }
 #MAREY_VAIRELLES{
   background-color : gold; }
+
 @import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
 
 /* ========== THOUVEREZ ========== */
@@ -236,6 +254,7 @@
     cursor: pointer;
     z-index: 10;
 }
+
 /* ========== ZABAWSKI ========== */
 #ZABAWSKI {
     border: none;
