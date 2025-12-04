@@ -1,0 +1,26 @@
+#EL_MESSAOURI{
+  --bg1:#ff6b6b; --bg2:#ffd166; --bg3:#6be2ff; --bg4:#9b8cff;
+  --padding:12px; --radius:18px;
+  --shadow:0 10px 30px rgba(0,0,0,0.12);
+  --glow:0 0 30px rgba(155,140,255,0.18);
+
+  display:inline-block;
+  padding:var(--padding);
+  border-radius:calc(var(--radius) + var(--padding));
+  background:linear-gradient(135deg,var(--bg1),var(--bg2),var(--bg3),var(--bg4));
+  box-shadow:var(--shadow);
+  transition:.25s;
+  overflow:hidden;
+}
+
+#EL_MESSAOURI img{
+  display:block;
+  border-radius:var(--radius);
+  box-shadow:var(--glow);
+  transition: transform 1s ease;
+  transform-origin: center center;
+}
+
+#EL_MESSAOURI:hover img{
+  transform: rotate(360deg) scale(1.03);
+}
