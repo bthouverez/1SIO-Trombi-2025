@@ -1,0 +1,27 @@
+
+#DIALLO {
+  width: 300px;
+  height: auto;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+#DIALLO img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: all 0.3s ease;
+  filter: brightness(95%) contrast(105%);
+}
+
+#DIALLO img:hover {
+  transform: scale(1.08);
+  filter: brightness(105%) contrast(110%) saturate(120%);
+}
+
+
+#DIALLO img {
+  filter: grayscale(100%);
+}
