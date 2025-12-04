@@ -1,12 +1,159 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carte FIFA Mehdi 88</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #111;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+
+    .fifa-card {
+      position: relative;
+      width: 260px;
+      height: 400px;
+      border-radius: 18px;
+      padding: 14px 12px;
+      background: linear-gradient(145deg, #f7e49b, #d3b45b, #fff3c4);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+      color: #2a210f;
+      text-transform: uppercase;
+      box-sizing: border-box;
+    }
+
+    .fifa-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 18px;
+      border: 2px solid rgba(255,255,255,0.45);
+      pointer-events: none;
+    }
+
+    .top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .rating-position {
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .rating {
+      font-size: 32px;
+      line-height: 1;
+    }
+
+    .position {
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+
+    .nation-club {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 6px;
+    }
+
+    .nation-club img {
+      width: 32px;
+      height: 20px;
+      object-fit: cover;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+    }
+
+    .club-logo {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: white;
+    }
+
+    .player-photo {
+      position: absolute;
+      top: 46%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      border-radius: 14px;
+      box-shadow: 0 10px 18px rgba(0,0,0,0.6);
+      object-fit: cover;
+    }
+
+    }
+
+    .player-name {
+      position: absolute;
+      top: 62%;
+      width: 100%;
+      text-align: center;
+      font-weight: bold;
+      font-size: 20px;
+      letter-spacing: 1px;
+    }
+
+    .stats {
+      position: absolute;
+      bottom: 18px;
+      left: 16px;
+      right: 16px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 6px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .stat span:first-child {
+      width: 26px;
+      display: inline-block;
+    }
+  </style>
 </head>
 <body>
-    <h1 style="text-align: center;">Cv Mehdi Shit</h1>
-    <img src="CV Mehdi Chelit.jpg" style="display: block; margin: 0 auto;">
+
+  <div class="fifa-card">
+
+    <div class="top-row">
+      <div class="rating-position">
+        <div class="rating">88</div>
+        <div class="position">ST</div>
+      </div>
+
+      <div class="nation-club">
+        <img src="drapeau fr.jpg" alt="France">
+        <img class="club-logo" src="logo real.webp" alt="Real Madrid">
+      </div>
+    </div>
+
+    <img class="player-photo" src="CV Mehdi Chelit.jpg" alt="Mehdi">
+
+    <div class="player-name">Chelit Mehdi</div>
+
+    <div class="stats">
+      <div class="stat"><span>86</span> PAC</div>
+      <div class="stat"><span>90</span> SHO</div>
+      <div class="stat"><span>82</span> PAS</div>
+      <div class="stat"><span>88</span> DRI</div>
+      <div class="stat"><span>40</span> DEF</div>
+      <div class="stat"><span>78</span> PHY</div>
+    </div>
+
+  </div>
+
 </body>
 </html>
