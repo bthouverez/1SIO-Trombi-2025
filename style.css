@@ -435,10 +435,10 @@
 }
 
 #MESPREUVE:hover {
-    transform: scale(1.1);
-
-    border-color: yellow;
-
+    transform: scale(1.1); 
+    
+    border-color: orange; 
+    
     border-width: 5px;
 
     cursor: pointer;
