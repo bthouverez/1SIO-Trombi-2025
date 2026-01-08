@@ -577,3 +577,20 @@
 #DIALLO img {
     filter: grayscale(100%);
 }
+
+/* ========== ESSAYAH ========== */
+#ESSAYAH {
+    text-align: center;
+    font-weight: bold;
+    background-color: grey;
+    border: 3px solid green;
+    border-radius: 10px;
+}
+
+#ESSAYAH img {
+    transition: transform 0.6s ease;
+}
+
+#ESSAYAH:hover img {
+    transform: rotate(360deg);
+}
