@@ -1,3 +1,4 @@
+
 /* ---- FOND DYNAMIQUE (extérieur, pas le cadre) --- */
 
 
@@ -19,6 +20,162 @@
 }
 
 /* ---- CADRE AVEC NEON EXTERNE ---- */
+
+#EL_MESSAOURI{
+  --bg1:#ff6b6b; --bg2:#ffd166; --bg3:#6be2ff; --bg4:#9b8cff;
+  --padding:12px; --radius:18px;
+  --shadow:0 10px 30px rgba(0,0,0,0.12);
+  --glow:0 0 30px rgba(155,140,255,0.18);
+
+  display:inline-block;
+  padding:var(--padding);
+  border-radius:calc(var(--radius) + var(--padding));
+  background:linear-gradient(135deg,var(--bg1),var(--bg2),var(--bg3),var(--bg4));
+  box-shadow:var(--shadow);
+  transition:.25s;
+  overflow:hidden;
+}
+
+#EL_MESSAOURI img{
+  display:block;
+  border-radius:var(--radius);
+  box-shadow:var(--glow);
+  transition: transform 1s ease;
+  transform-origin: center center;
+}
+
+#EL_MESSAOURI:hover img{
+  transform: rotate(360deg) scale(1.03);
+}
+/* ===== Carte FIFA pour CHELIT Mehdi ===== */
+
+#CHELIT {
+  position: relative;
+  width: 260px;
+  height: 400px;
+  margin: 20px;
+  padding: 0;
+  border-radius: 28px 28px 22px 22px;
+  overflow: hidden;
+
+  background:
+    url("drapeau fr.jpg") no-repeat right 18px top 16px / 34px 22px,
+    url("logo real.webp") no-repeat right 18px top 52px / 28px 28px,
+    linear-gradient(145deg, #f7e49b, #d3b45b, #fdf3c4);
+
+  box-shadow: 0 18px 32px rgba(0,0,0,0.45);
+}
+
+/* le lien prend toute la carte */
+#CHELIT a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* PHOTO CENTRÉE DANS LA CARTE */
+#CHELIT img {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 165px;
+  
+  border-radius: 18px;
+  object-fit: cover;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+}
+
+/* on cache le texte original sous la photo */
+#CHELIT p {
+  display: none;
+}
+
+/* NOTE + POSTE EN HAUT À GAUCHE */
+#CHELIT::before {
+  content: "88 ST";
+  position: absolute;
+  left: 20px;
+  top: 22px;
+  font-weight: 700;
+  font-size: 30px;
+  letter-spacing: 2px;
+  color: #2a210f;
+  font-family: Arial, sans-serif;
+}
+
+#stats-MEHDI {
+  position: absolute;
+  bottom: 25px;
+  left: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  color: #2a210f;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 colonnes */
+  width: 180px;
+  line-height: 1.4;
+}
+
+#stats-MEHDI::before {
+  content: "95 PAC\n82 PAS\n34 DEF";
+  white-space: pre;
+}
+
+#stats-MEHDI::after {
+  content: "82 SHO\n91 DRI\n76 PHY";
+  white-space: pre;
+}
+#EL_HANI {
+  width: 250px;
+  height: auto;
+
+  
+  border: 4px solid red;
+
+  
+  animation: bouger 2s infinite alternate;
+}
+
+
+@keyframes bouger {
+  from {
+    transform: translateX(0px);
+    border-color: red;
+  }
+  to {
+    transform: translateX(20px);
+    border-color: blue;
+  }
+}
+
+#OMORES{
+    width: fit-content;
+    padding: 10px;
+    border: 4px solid #4A90E2;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #4A90E2;
+    animation: glow 2s infinite alternate;
+}
+
+#OMORES img {
+    width: 200px; 
+    border-radius: 15px;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px #4A90E2;
+        border-color: #4A90E2;
+    }
+    to {
+        box-shadow: 0 0 25px #00c8ff;
+        border-color: #00c8ff;
+    }
+}
+
 #BARLET {
     padding: 20px;
     border-radius: 20px;
@@ -71,11 +228,13 @@
 
 /* Nom */
 #BARLET h2 {
-  margin-top: 12px;
-  color: white;
-  font-family: "Poppins", sans-serif;
-  font-size: 1.3em;
-  letter-spacing: 1px;
+    margin-top: 12px;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.3em;
+    letter-spacing: 1px;
+}
+
 #CAYRAC {
   width: 220px;
   /*height: 220px;*/
@@ -344,6 +503,14 @@
     cursor: pointer;
     z-index: 10;
 }
+/* ========== AMAR ========== */
+#AMAR {
+    border-radius: 15px;
+    background: linear-gradient(to bottom, blue, #FFD700);
+    transition: 0.3s;
+    background-color: orange;
+}
+
 
 /* ========== ZABAWSKI ========== */
 #ZABAWSKI {
@@ -440,12 +607,58 @@
 }
 
 #MESPREUVE:hover {
-    transform: scale(1.1);
-
-    border-color: yellow;
-
+    transform: scale(1.1); 
+    
+    border-color: orange; 
+    
     border-width: 5px;
 
     cursor: pointer;
     z-index: 10;
+}
+
+
+
+#DIALLO {
+    width: 300px;
+    height: auto;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+#DIALLO img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: all 0.3s ease;
+    filter: brightness(95%) contrast(105%);
+}
+
+#DIALLO img:hover {
+    transform: scale(1.08);
+    filter: brightness(105%) contrast(110%) saturate(120%);
+}
+
+
+#DIALLO img {
+    filter: grayscale(100%);
+}
+
+/* ========== ESSAYAH ========== */
+#ESSAYAH {
+    text-align: center;
+    font-weight: bold;
+    background-color: grey;
+    border: 3px solid green;
+    border-radius: 10px;
+}
+
+#ESSAYAH img {
+    transition: transform 0.6s ease;
+}
+
+#ESSAYAH:hover img {
+    transform: rotate(360deg);
 }
